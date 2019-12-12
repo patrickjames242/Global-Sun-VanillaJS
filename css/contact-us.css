@@ -1,0 +1,93 @@
+
+
+
+/* main > .content{ */
+    /* margin: 0 auto;
+    padding: 0 60px;
+    max-width: 1100px; */
+/* } */
+
+
+
+main > .page-bottom-content{
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 100px;
+    align-items: start;
+    margin-bottom: 70px;
+}
+
+main > .page-bottom-content > .text-input-boxes{
+    align-self: start;
+    display: grid;
+    gap: 15px;
+}
+
+main > .page-bottom-content > .text-input-boxes > .input-box{
+    padding: 19px;
+    font-size: 16px;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 6px;
+    
+    transition-property: border-color;
+    transition-duration: 0.2s;
+    box-sizing: border-box;
+}
+
+main > .page-bottom-content > .text-input-boxes > .input-box:focus{
+    border-color: var(--theme-orange-color);
+    border-width: 2px;
+}
+
+main > .page-bottom-content > .text-input-boxes > .message-box{
+
+    --highlight-color: black;
+
+    border-radius: 6px;
+    border: 2px solid var(--highlight-color);
+    font-weight: bold;
+    padding: 10px;
+    color: var(--highlight-color);
+
+}
+
+main > .page-bottom-content > .text-input-boxes > .message-was-sent-box{
+    --highlight-color: var(--theme-orange-color);
+}
+
+main > .page-bottom-content > .text-input-boxes > .fill-out-all-fields-box{
+    --highlight-color: red;
+
+}
+
+main > .page-bottom-content > .text-input-boxes > .submit-button{
+    padding: 15px 30px;
+    background-color: var(--theme-orange-color);
+    justify-self: end;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    text-transform: uppercase;
+    border-radius: 6px;
+}
+
+
+main > .page-bottom-content > .contact-info-box{
+    display: grid;
+    gap: 50px;
+}
+
+main > .page-bottom-content > .contact-info-box > .contact-method{
+    display: grid;
+    gap: 10px;
+}
+
+main > .page-bottom-content > .contact-info-box > .contact-method > .title{
+    font-size: 25px;
+}
+
+main > .page-bottom-content > .contact-info-box > .contact-method > .value{
+    color: var(--theme-orange-color);
+    font-size: 18px;
+}
