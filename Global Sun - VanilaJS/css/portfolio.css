@@ -1,0 +1,123 @@
+
+.page-title-box{
+    margin-bottom: 70px;
+}
+
+.projects-grid{
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 50px;
+    align-items: start;
+}
+
+.projects-grid > *{
+    display: grid;
+    gap: 30px;
+}
+
+.projects-grid .project-box{
+    background-color: rgb(242, 242, 242);
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.projects-grid .project-box{
+    display: grid;    
+    padding: 30px;
+    gap: 30px;
+    grid-template-rows: 200px 1fr;
+}
+
+.projects-grid .project-box > .image-holder{
+    position: relative;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    overflow: hidden;
+    background-color: white;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+
+
+.projects-grid .project-box > .info-box{
+    align-self: start;
+}
+
+.projects-grid .project-box > .info-box > .company-name{
+    color: var(--theme-orange-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.projects-grid .project-box > .info-box > .title{
+    font-size: 30px;
+    line-height: 1.1;
+    position: relative;
+    margin-top: 10px;
+}
+
+
+
+.projects-grid .project-box > .info-box > .title::before{
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 80px;
+    bottom: -25px;
+    left: 0;
+    background-color: var(--theme-orange-color);
+}
+
+.projects-grid .project-box > .info-box > .indented-list{
+    line-height: 1.7;
+    margin-top: 50px;
+    margin-left: 20px;
+    font-size: 16px;
+    display: grid;
+    gap: 10px;
+}
+
+.projects-grid .project-box > .info-box > .indented-list > *{
+    position: relative;
+    line-height: 1.4;
+}
+.projects-grid .project-box > .info-box > .indented-list > *::before{
+    content: '>';
+    position: absolute;
+    top: -0.1em;
+    left: -20px;
+    
+}
+
+.projects-grid .project-box > .info-box > .contact-us-button{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding: 20px;
+    display: inline-block;
+    border: 2px solid var(--theme-orange-color);
+    color: var(--theme-orange-color);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 6px;
+    transition-duration: 0.2s;
+    transition-property: color, background-color;
+}
+
+.projects-grid .project-box > .info-box > .contact-us-button:hover{
+    color: white;
+    background-color: var(--theme-orange-color);
+}
+
+/* .about-us-grid > .cell > .text-section > .description .indented-list{
+    margin-top: 20px;
+    margin-left: 30px;
+    display: grid;
+    gap: 10px;
+} */
+
+

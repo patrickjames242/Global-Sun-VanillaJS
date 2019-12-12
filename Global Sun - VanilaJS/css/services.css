@@ -1,0 +1,98 @@
+
+.page-title-box{
+    margin-bottom: 70px;
+}
+
+.services-grid{
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 50px;
+}
+
+.services-grid > *{
+    background-color: rgb(242, 242, 242);
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.services-grid > .service-box{
+    display: grid;    
+    padding: 30px;
+    gap: 30px;
+}
+
+.services-grid > .service-box:not(.long){
+    grid-template-rows: 200px 1fr;
+}
+
+.services-grid > .service-box.long{
+    grid-column: 1/-1;
+    grid-template-columns: 1fr 1fr;
+}
+
+.services-grid > .service-box > .image-holder{
+    position: relative;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    overflow: hidden;
+}
+
+.services-grid > .service-box > .image-holder > img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.services-grid > .service-box > .info-box{
+    align-self: start;
+}
+
+.services-grid > .service-box > .info-box > .title{
+    font-size: 50px;
+    line-height: 1.1;
+    position: relative;
+}
+
+.services-grid > .service-box:not(.long) > .info-box > .title{
+    font-size: 30px;
+}
+
+.services-grid > .service-box > .info-box > .title::before{
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 80px;
+    bottom: -25px;
+    left: 0;
+    background-color: var(--theme-orange-color);
+}
+
+.services-grid > .service-box > .info-box > .description{
+    line-height: 1.7;
+    margin-top: 50px;
+    font-size: 16px;
+}
+
+.services-grid > .service-box > .info-box > .contact-us-button{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding: 20px;
+    display: inline-block;
+    border: 2px solid var(--theme-orange-color);
+    color: var(--theme-orange-color);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 6px;
+    transition-duration: 0.2s;
+    transition-property: color, background-color;
+}
+
+.services-grid > .service-box > .info-box > .contact-us-button:hover{
+    color: white;
+    background-color: var(--theme-orange-color);
+}

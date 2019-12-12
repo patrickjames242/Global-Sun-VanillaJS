@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Global Sun - Blog</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/blog.css">
+
+    <script src="../javascript/helpers.js"></script>
+    <script src="../javascript/blog.js"></script>
+</head>
+
+<body>
+
+    <div class="website-content">
+        <main>
+
+            <div class="page-title-box">
+                <h1>News and Trends</h1>
+                <p>Explore our handpicked articles about the latest developments in the tech industry today.</p>
+            </div>
+
+            <div class="articles-grid">
+            </div>
+
+            <script>
+
+                const articles = [
+                    {
+                        url: "https://www.cnet.com/news/motorola-razr-7-burning-questions-we-still-have-about-the-foldable-phone/",
+                        imageFileName: "motorola-razr.png",
+                        websiteName: "Cnet",
+                        title: "Motorola Razr: 7 most important questions we still have",
+                        description: "Motorola's $1,500 foldable Razr phone is still weeks away from going on sale, and we have questions."
+                    },
+                    {
+                        url: "https://www.theverge.com/2019/11/19/20972100/samsung-galaxy-watch-active-2-update-bixby-health-customization-ux-options",
+                        imageFileName: "galaxy-watch.jpg",
+                        websiteName: "The Verge",
+                        title: "Samsung is updating its older smartwatches",
+                        description: "Samsung is updating the Galaxy Watch and Galaxy Watch Active with a host of new features that were introduced with the Galaxy Watch Active 2, our pick for the best smartwatch for Android users."
+                    },
+                    {
+                        url: "https://www.computerworld.com/article/3454403/security-lessons-from-a-mac-only-fintech-company.html",
+                        imageFileName: "security-for-mac.jpg",
+                        websiteName: "Computer World",
+                        title: "Security lessons from a Mac-only fintech company",
+                        description: "Build America Mutual, a leading U.S. municipal bond insurer, is an all Apple shop. And even though macOS and iOS are generally secure, threats to the platforms continue to rise."
+                    },
+                    {
+                        url: "https://www.businesstoday.in/sectors/it/ibm-to-sell-some-of-its-software-business-to-hcl/story/298220.html",
+                        imageFileName: "ibm.png",
+                        websiteName: "Business Today",
+                        title: "IBM to sell some of its software business to HCL",
+                        description: "International Business Machines Corp plans to sell some of its software products business to Indian software services exporter HCL Technologies for $1.80 billion"
+                    },
+                    {
+                        url: "https://www.businesstoday.in/sectors/it/ibm-to-sell-some-of-its-software-business-to-hcl/story/298220.html",
+                        imageFileName: "google-gaming-controller.png",
+                        websiteName: "Cnet",
+                        title: "Google Stadia wants to be the future of gaming.",
+                        description: "And then there were four. Google Stadia, the tech titan's new service that lets you play video games like you stream the TV show Stranger Things from Netflix, launched this week with high hopes."
+                    },
+                    {
+                        url: "https://www.cnet.com/news/samsung-to-open-first-bay-area-store-in-apples-backyard/",
+                        imageFileName: "sumsung-opens-store.png",
+                        websiteName: "Cnet",
+                        title: "Samsung to open first Bay Area store in Apple's backyard",
+                        description: "The company's first Samsung Experience Store in the San Francisco Bay Area is scheduled to open Dec. 12 at the Stanford Shopping Center in Palo Alto, California."
+                    },
+                    {
+                        url: "https://www.itworld.com/article/3453637/microsoft-shows-off-hybrid-cloud-management-and-cloud-analytics-tools-at-ignite.html",
+                        imageFileName: "microsoft-hybrid-cloud.jpg",
+                        websiteName: "Cnet",
+                        title: "Microsoft shows off hybrid cloud management and cloud analytics tools at Ignite",
+                        description: "Enterprises will soon have access to Azure Arc and Azure Synapse Analytics, two new services that bolster Microsoft’s cloud offerings."
+                    },
+                ];
+
+                function getNodeFor(article) {
+                    return a({ className: "article", target: "_blank", href: article.url }, [
+                        div({ className: "image-container" }, [
+                            img({ src: "../assets/article-images/" + article.imageFileName })
+                        ]),
+                        div({ className: "text-box" }, [
+                            p({ className: "website-name" }, [text(article.websiteName)]),
+                            p({ className: "title" }, [text(article.title)]),
+                            p({ className: "description" }, [text(article.description)])
+                        ])
+                    ])
+                }
+
+                const nodes = articles.map(a => getNodeFor(a));
+                document.querySelector(".articles-grid").append(...nodes);
+                
+            </script>
+        </main>
+    </div>
+
+
+</body>
+
+</html>
