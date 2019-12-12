@@ -1,3 +1,0 @@
-executeWhenDocumentIsLoaded(() => {
-    addHeaderAndFooterToDocument(HeaderSelectedItem.services);
-});
